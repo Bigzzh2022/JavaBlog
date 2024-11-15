@@ -8,7 +8,8 @@ Vue3+Ts+Element plus+Java+Mysql博客Powered by Cursor
 - [x] 登录和注册
 
 数据库在![Clip_2024-11-15_14-53-22](https://github.com/user-attachments/assets/1df7f992-3350-4b1a-a7e3-30e2c3c8ade4)里修改
-``sql
+
+```sql
 datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/blog_db?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false
@@ -17,6 +18,7 @@ datasource:
 ```
 
 启动后端项目：
+
 ```
 mvn clean install
 mvn spring-boot:run
