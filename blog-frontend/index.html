@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>站点标题</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+    <script>
+      document.addEventListener("keydown", function (event) {
+        if (event.keyCode === 123) {  // F12键
+          // 使用更现代的提示方式替代 alert
+          const message = document.createElement('div');
+          message.textContent = '开发者模式已打开，请遵循GPL协议';
+          message.style.cssText = `
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              background: #4169E1;
+              color: white;
+              padding: 10px;
+              text-align: center;
+              z-index: 9999;
+          `;
+          document.body.appendChild(message);
+          setTimeout(() => message.remove(), 3000);  // 3秒后自动消失
+          
+          return true;  // 允许开发者工具打开
+        }
+      });
+    </script>
+  </body>
+</html>
